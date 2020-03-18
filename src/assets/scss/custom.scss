@@ -93,4 +93,12 @@ button {
       background-color: rgba(0, 128, 0, 0.623);
     }
   }
+
+  // &.w-100 {
+  //   width: 100%;
+  // }
+
+  &.w-fixed {
+    width: 115px;
+  }
 }

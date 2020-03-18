@@ -3,3 +3,5 @@ export { default as Breadcrumb } from "./Breadcrumb/Breadcrumb";
 export { default as FormEditor } from "./FormEditor/FormEditor";
 export { default as Submenu } from "./Submenu/Submenu";
 export { default as MainForm } from "./MainForm/MainForm";
+export { default as Buttons } from "./Buttons/Buttons";
+export { default as CatSubmenu } from "./CatSubmenu/CatSubmenu";

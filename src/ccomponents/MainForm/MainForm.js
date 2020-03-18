@@ -5,7 +5,7 @@ const mainForm = ({ children, titleControl, slugControl, formEdited }) => {
 	return (
 		<React.Fragment>
 			<FormGroup>
-				<Label for="lesson">Lesson title:</Label>
+				<Label for="lesson">Title:</Label>
 				<Input
 					placeholder="eg: Intro to combining functions"
 					id="lesson"

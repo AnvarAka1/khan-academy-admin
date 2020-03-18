@@ -1,6 +1,7 @@
 import React from "react";
 import Select from "react-select";
-import { Form, FormGroup, Label, Button } from "reactstrap";
+import { Form, FormGroup, Label } from "reactstrap";
+import { Buttons } from "../";
 const submenu = ({ children, statusSelect, infos, src, submitted, deleted }) => {
 	return (
 		<React.Fragment>
@@ -20,18 +21,13 @@ const submenu = ({ children, statusSelect, infos, src, submitted, deleted }) => 
 				</FormGroup>
 				{children}
 
-				<FormGroup>
-					<Label>Thumbnail</Label>
-					<img style={{ width: "100%" }} src={src} alt={"Thumbnail"} />
-				</FormGroup>
-				<div className="d-flex align-items-center justify-content-between">
-					<Button type="submit" className="w-100 mr-1 primary" onClick={submitted}>
-						Save
-					</Button>
-					<Button type="button" className="w-100 danger" onClick={deleted}>
-						Delete
-					</Button>
-				</div>
+				{src && (
+					<FormGroup>
+						<Label>Thumbnail</Label>
+						<img style={{ width: "100%" }} src={src} alt={"Thumbnail"} />
+					</FormGroup>
+				)}
+				<Buttons submitted={submitted} deleted={deleted} />
 			</Form>
 		</React.Fragment>
 	);

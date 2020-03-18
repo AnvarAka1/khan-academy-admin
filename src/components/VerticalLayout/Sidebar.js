@@ -5,84 +5,182 @@ import MetisMenu from "metismenujs";
 import SimpleBar from "simplebar-react";
 
 const SidebarContent = props => {
+	const content = sideBarList().map(menu => {
+		return (
+			<li key={menu.id}>
+				<Link to={menu.link} className={`waves-effect ${menu.submenus && "has-arrow"}`}>
+					<i className={menu.icon} />
+					<span>{menu.title}</span>
+				</Link>
+				{menu.submenus && (
+					<ul className="sub-menu" aria-expanded="false">
+						{menu.submenus.map(sub => {
+							return (
+								<li key={sub.id}>
+									<Link to={sub.link}>{sub.title}</Link>
+								</li>
+							);
+						})}
+					</ul>
+				)}
+			</li>
+		);
+	});
 	return (
 		<div id="sidebar-menu">
 			<ul className="metismenu list-unstyled" id="side-menu">
 				<li className="menu-title">Main</li>
-
-				<li>
-					<Link to="/dashboard" className="waves-effect">
-						<i className="ti-home" />
-						<span className="badge badge-pill badge-primary float-right">2</span>
-						<span>Dashboard</span>
-					</Link>
-				</li>
-				<li>
-					<Link to="/#" className="has-arrow waves-effect">
-						<i className="ti-email" />
-						<span>Courses</span>
-					</Link>
-					<ul className="sub-menu" aria-expanded="false">
-						<li>
-							<Link to="/lessons">Lessons</Link>
-						</li>
-						<li>
-							<Link to="/categories">Course category</Link>
-						</li>
-						{/* <li>
-							<Link to="/email-compose">Email Compose</Link>
-						</li> */}
-					</ul>
-				</li>
-				<li>
-					<Link to="/calendar" className=" waves-effect">
-						<i className="ti-email" />
-						<span>Blog</span>
-					</Link>
-				</li>
-
-				<li>
-					<Link to="/calendar" className=" waves-effect">
-						<i className="ti-calendar" />
-						<span>Longread</span>
-					</Link>
-				</li>
-
-				<li>
-					<Link to="/calendar" className=" waves-effect">
-						<i className="ti-calendar" />
-						<span>Guide</span>
-					</Link>
-				</li>
-				<li>
-					<Link to="/calendar" className=" waves-effect">
-						<i className="ti-calendar" />
-						<span>Professions</span>
-					</Link>
-				</li>
-				<li>
-					<Link to="/calendar" className=" waves-effect">
-						<i className="ti-calendar" />
-						<span>Users</span>
-					</Link>
-				</li>
-				<li>
-					<Link to="/calendar" className=" waves-effect">
-						<i className="ti-calendar" />
-						<span>Admins</span>
-					</Link>
-				</li>
-				<li>
-					<Link to="/calendar" className=" waves-effect">
-						<i className="ti-calendar" />
-						<span>Miscellaneous</span>
-					</Link>
-				</li>
+				{content}
 			</ul>
 		</div>
 	);
 };
 
+const sideBarList = () => {
+	return [
+		{
+			id: 0,
+			link: "/#",
+			title: "Dashboard",
+			icon: "ti-home"
+		},
+		{
+			id: 1,
+			link: "/#",
+			title: "Courses",
+			icon: "ti-email",
+			submenus: [
+				{
+					id: 0,
+					link: "/lessons",
+					title: "Lessons"
+				},
+				{
+					id: 1,
+					link: "/course-categories",
+					title: "Course categories"
+				}
+			]
+		},
+		{
+			id: 2,
+			link: "/#",
+			title: "Blog",
+			icon: "ti-email",
+			submenus: [
+				{
+					id: 0,
+					link: "/articles",
+					title: "Articles"
+				},
+				{
+					id: 1,
+					link: "/blog-categories",
+					title: "Blog categories"
+				}
+			]
+		},
+		{
+			id: 3,
+			link: "/#",
+			title: "Longread",
+			icon: "ti-calendar",
+			submenus: [
+				{
+					id: 0,
+					link: "/longreads",
+					title: "Longreads"
+				},
+				{
+					id: 1,
+					link: "/series",
+					title: "Series"
+				},
+				{
+					id: 2,
+					link: "/longread-categories",
+					title: "Longread categories"
+				}
+			]
+		},
+		{
+			id: 4,
+			link: "/#",
+			title: "Guide",
+			icon: "ti-email",
+			submenus: [
+				{
+					id: 0,
+					link: "/chapters",
+					title: "Chapters"
+				},
+				{
+					id: 1,
+					link: "/guides",
+					title: "Guides"
+				},
+				{
+					id: 2,
+					link: "/guide-categories",
+					title: "Guide categories"
+				}
+			]
+		},
+		{
+			id: 5,
+			link: "/#",
+			title: "Profession",
+			icon: "ti-email",
+			submenus: [
+				{
+					id: 0,
+					link: "/professions",
+					title: "Professions"
+				}
+			]
+		},
+		{
+			id: 6,
+			link: "/users",
+			title: "Users",
+			icon: "ti-email"
+		},
+		{
+			id: 7,
+			link: "/admins",
+			title: "Admins",
+			icon: "ti-email"
+		},
+		{
+			id: 8,
+			link: "/#",
+			title: "Miscellaneous",
+			icon: "ti-email",
+			submenus: [
+				{
+					id: 0,
+					link: "/numbers",
+					title: "Numbers"
+				},
+				{
+					id: 1,
+					link: "/donors",
+					title: "Donors"
+				},
+				{
+					id: 2,
+					link: "/reports",
+					title: "Reports"
+				},
+				{
+					id: 3,
+					link: "/persons",
+					title: "Persons"
+				}
+			]
+		}
+	];
+};
 class Sidebar extends Component {
 	constructor(props) {
 		super(props);

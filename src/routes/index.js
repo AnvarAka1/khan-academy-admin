@@ -2,7 +2,14 @@ import React from "react";
 import { Redirect } from "react-router-dom";
 
 // CUSTOM
-import { LessonsPage, LessonsEditPage } from "../containers/";
+import {
+	LessonsPage,
+	LessonsEditPage,
+	CoursesCatPage,
+	ArticlesPage,
+	ArticlesEditPage,
+	BlogCatPage
+} from "../containers/";
 
 // END_CUSTOM
 // Pages Component
@@ -103,8 +110,47 @@ import PagesComingsoon from "../pages/ExtraPages/PagesComingsoon";
 
 const authProtectedRoutes = [
 	// Custom pages
+
+	// Courses
 	{ path: "/lessons/:id", component: LessonsEditPage },
 	{ path: "/lessons", component: LessonsPage },
+	{ path: "/course-categories", component: CoursesCatPage },
+
+	// Blog
+	{ path: "/articles/:id", component: ArticlesEditPage },
+	{ path: "/articles", component: ArticlesPage },
+	{ path: "/blog-categories", component: BlogCatPage },
+
+	// Longread
+	{ path: "/lessons/:id", component: LessonsEditPage },
+	{ path: "/lessons", component: LessonsPage },
+	{ path: "/course-categories", component: CoursesCatPage },
+
+	// Guide
+	{ path: "/lessons/:id", component: LessonsEditPage },
+	{ path: "/lessons", component: LessonsPage },
+	{ path: "/course-categories", component: CoursesCatPage },
+
+	// Profession
+	{ path: "/lessons/:id", component: LessonsEditPage },
+	{ path: "/lessons", component: LessonsPage },
+	{ path: "/course-categories", component: CoursesCatPage },
+
+	// Users
+	{ path: "/lessons/:id", component: LessonsEditPage },
+	{ path: "/lessons", component: LessonsPage },
+	{ path: "/course-categories", component: CoursesCatPage },
+
+	// Admins
+	{ path: "/lessons/:id", component: LessonsEditPage },
+	{ path: "/lessons", component: LessonsPage },
+	{ path: "/course-categories", component: CoursesCatPage },
+
+	// Miscellaneous
+	{ path: "/lessons/:id", component: LessonsEditPage },
+	{ path: "/lessons", component: LessonsPage },
+	{ path: "/course-categories", component: CoursesCatPage },
+
 	// Calendar
 	{ path: "/calendar", component: Calendar },
 
