@@ -25,17 +25,8 @@ const ProfileMenu = ({ fullName }) => {
 				</DropdownToggle>
 				<DropdownMenu right>
 					<DropdownItem tag="a" href="#">
-						<i className="mdi mdi-account-circle font-size-17 align-middle mr-1" />Profile
-					</DropdownItem>
-					<DropdownItem tag="a" href="#">
-						<i className="mdi mdi-wallet font-size-17 align-middle mr-1" />My Wallet
-					</DropdownItem>
-					<DropdownItem tag="a" href="#">
 						<span className="badge badge-success float-right">11</span>
 						<i className="mdi mdi-settings font-size-17 align-middle mr-1" />Settings
-					</DropdownItem>
-					<DropdownItem tag="a" href="#">
-						<i className="mdi mdi-lock-open-outline font-size-17 align-middle mr-1" />Lock screen
 					</DropdownItem>
 					<div className="dropdown-divider" />
 					<Link to="/logout" className="dropdown-item">

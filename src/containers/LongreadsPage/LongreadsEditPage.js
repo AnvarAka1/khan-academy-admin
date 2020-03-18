@@ -2,19 +2,14 @@ import React, { useEffect } from "react";
 import { Container, Col, Row, Card, CardBody, FormGroup, Label, Input } from "reactstrap";
 import { useSelect, useForm } from "../../hooks";
 import Select from "react-select";
-import { Breadcrumb, MainForm, Submenu } from "../../ccomponents/";
-const ArticlesEditPage = props => {
-	// const [ selectedGroup, setSelectedGroup ] = useState(null);
-	// const selectHandler = selected => {
-	// 	setSelectedGroup(selected);
-	// };
-
+import { Breadcrumb, MainForm, Submenu, AudioVersion } from "../../ccomponents/";
+const SeriesEditPage = props => {
 	const titleControl = useForm();
 	const slugControl = useForm();
 	const metaDescControl = useForm();
-
+	const orderControl = useForm();
 	const statusSelect = useSelect();
-	const categorySelect = useSelect();
+	const seriesSelect = useSelect();
 	const formEditChangeHandler = event => {
 		console.log("Changed!");
 	};
@@ -39,7 +34,7 @@ const ArticlesEditPage = props => {
 			}
 		];
 		statusSelect.initOptions(optionGroup);
-		categorySelect.initOptions(optionGroup);
+		seriesSelect.initOptions(optionGroup);
 		// eslint-disable-next-line
 	}, []);
 	const submitHandler = () => {
@@ -48,16 +43,34 @@ const ArticlesEditPage = props => {
 	const deleteHandler = () => {
 		console.log("Deleted!");
 	};
+	const audioSelectHandler = () => {
+		console.log("Selected!");
+	};
+	const audioRemoveHandler = () => {
+		console.log("Removed!");
+	};
 
 	const subContent = (
-		<FormGroup>
-			<Label>Category</Label>
-			<Select
-				value={categorySelect.value}
-				onChange={categorySelect.selectHandler}
-				options={categorySelect.options}
-			/>
-		</FormGroup>
+		<React.Fragment>
+			<FormGroup>
+				<Label>Series</Label>
+				<Select
+					value={seriesSelect.value}
+					onChange={seriesSelect.selectHandler}
+					options={seriesSelect.options}
+				/>
+			</FormGroup>
+			<FormGroup>
+				<Label for="order">Order:</Label>
+				<Input
+					placeholder=""
+					id="order"
+					className="form-control"
+					value={orderControl.value}
+					onChange={orderControl.onChange}
+				/>
+			</FormGroup>
+		</React.Fragment>
 	);
 	return (
 		<Container fluid>
@@ -82,6 +95,11 @@ const ArticlesEditPage = props => {
 									onChange={metaDescControl.onChange}
 								/>
 							</FormGroup>
+							<AudioVersion
+								title={"intro-to-combining-functions asdsasdasda dsad as"}
+								selected={audioSelectHandler}
+								removed={audioRemoveHandler}
+							/>
 						</CardBody>
 					</Card>
 				</Col>
@@ -104,4 +122,4 @@ const ArticlesEditPage = props => {
 	);
 };
 
-export default ArticlesEditPage;
+export default SeriesEditPage;

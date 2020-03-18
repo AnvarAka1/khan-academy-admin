@@ -8,7 +8,12 @@ import {
 	CoursesCatPage,
 	ArticlesPage,
 	ArticlesEditPage,
-	BlogCatPage
+	BlogCatPage,
+	LongreadsPage,
+	LongreadsEditPage,
+	LongreadsCatPage,
+	SeriesPage,
+	SeriesEditPage
 } from "../containers/";
 
 // END_CUSTOM
@@ -122,9 +127,11 @@ const authProtectedRoutes = [
 	{ path: "/blog-categories", component: BlogCatPage },
 
 	// Longread
-	{ path: "/lessons/:id", component: LessonsEditPage },
-	{ path: "/lessons", component: LessonsPage },
-	{ path: "/course-categories", component: CoursesCatPage },
+	{ path: "/longreads/:id", component: LongreadsEditPage },
+	{ path: "/longreads", component: LongreadsPage },
+	{ path: "/longreads-categories", component: LongreadsCatPage },
+	{ path: "/series/:id", component: SeriesEditPage },
+	{ path: "/series", component: SeriesPage },
 
 	// Guide
 	{ path: "/lessons/:id", component: LessonsEditPage },

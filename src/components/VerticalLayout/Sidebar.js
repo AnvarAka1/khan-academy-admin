@@ -98,7 +98,7 @@ const sideBarList = () => {
 				},
 				{
 					id: 2,
-					link: "/longread-categories",
+					link: "/longreads-categories",
 					title: "Longread categories"
 				}
 			]

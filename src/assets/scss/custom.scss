@@ -94,6 +94,38 @@ button {
     }
   }
 
+  &.simple {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: black;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border: none !important;
+      outline: none !important;
+      background: transparent !important;
+      box-shadow: none !important;
+    }
+
+    &.simple-primary {
+      color: #4945C4;
+
+      &:hover {
+        color: rgba(73, 69, 196, 0.692)
+      }
+    }
+
+    &.simple-danger {
+      color: #FF6565;
+
+      &:hover {
+        color: rgba(255, 101, 101, 0.747)
+      }
+    }
+  }
+
   // &.w-100 {
   //   width: 100%;
   // }

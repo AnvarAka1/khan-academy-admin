@@ -5,3 +5,5 @@ export { default as Submenu } from "./Submenu/Submenu";
 export { default as MainForm } from "./MainForm/MainForm";
 export { default as Buttons } from "./Buttons/Buttons";
 export { default as CatSubmenu } from "./CatSubmenu/CatSubmenu";
+export { default as Authors } from "./Authors/Authors";
+export { default as AudioVersion } from "./AudioVersion/AudioVersion";

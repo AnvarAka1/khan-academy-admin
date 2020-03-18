@@ -1,14 +1,48 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Col, Row, Card, CardBody, FormGroup, Label, Input } from "reactstrap";
 import { useSelect, useForm } from "../../hooks";
 import Select from "react-select";
-import { Breadcrumb, MainForm, Submenu } from "../../ccomponents/";
-const ArticlesEditPage = props => {
-	// const [ selectedGroup, setSelectedGroup ] = useState(null);
-	// const selectHandler = selected => {
-	// 	setSelectedGroup(selected);
-	// };
+import { Breadcrumb, MainForm, Submenu, Authors } from "../../ccomponents/";
+const SeriesEditPage = props => {
+	// eslint-disable-next-line
+	const [ authors, setAuthors ] = useState({
+		authors: [
+			{
+				id: 0,
+				name: "Elbek Bahromov"
+			},
+			{
+				id: 1,
+				name: "Another guy"
+			}
+		],
 
+		translators: [
+			{
+				id: 0,
+				name: "Elbek Bahromov"
+			},
+			{
+				id: 1,
+				name: "Another guy"
+			}
+		],
+
+		editors: [
+			{
+				id: 0,
+				name: "Elbek Bahromov"
+			},
+			{
+				id: 1,
+				name: "Another guy"
+			},
+			{
+				id: 2,
+				name: "Yet, another man"
+			}
+		]
+	});
 	const titleControl = useForm();
 	const slugControl = useForm();
 	const metaDescControl = useForm();
@@ -50,14 +84,24 @@ const ArticlesEditPage = props => {
 	};
 
 	const subContent = (
-		<FormGroup>
-			<Label>Category</Label>
-			<Select
-				value={categorySelect.value}
-				onChange={categorySelect.selectHandler}
-				options={categorySelect.options}
-			/>
-		</FormGroup>
+		<React.Fragment>
+			<FormGroup>
+				<Label>Category</Label>
+				<Select
+					value={categorySelect.value}
+					onChange={categorySelect.selectHandler}
+					options={categorySelect.options}
+				/>
+			</FormGroup>
+			<FormGroup>
+				<Label>Head image</Label>
+				<img
+					src={"https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_960_720.jpg"}
+					alt="Head"
+					style={{ width: "100%" }}
+				/>
+			</FormGroup>
+		</React.Fragment>
 	);
 	return (
 		<Container fluid>
@@ -82,6 +126,7 @@ const ArticlesEditPage = props => {
 									onChange={metaDescControl.onChange}
 								/>
 							</FormGroup>
+							<Authors authors={authors} />
 						</CardBody>
 					</Card>
 				</Col>
@@ -104,4 +149,4 @@ const ArticlesEditPage = props => {
 	);
 };
 
-export default ArticlesEditPage;
+export default SeriesEditPage;
