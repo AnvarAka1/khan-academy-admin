@@ -34,6 +34,7 @@ const LessonsPage = props => {
 		};
 		setData(resData);
 		setLoading(false);
+		// eslint-disable-next-line
 	}, []);
 
 	const editHandler = index => {

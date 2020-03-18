@@ -1,9 +1,10 @@
-.ps__rail-y:hover > .ps__thumb-y,
-.ps__rail-y:focus > .ps__thumb-y,
+.ps__rail-y:hover>.ps__thumb-y,
+.ps__rail-y:focus>.ps__thumb-y,
 .ps__rail-y.ps--clicking .ps__thumb-y,
 .ps__rail-y {
   width: auto !important;
 }
+
 .rdw-editor-main {
   border: 1px solid #efefef !important;
   border-radius: 4px !important;
@@ -41,16 +42,55 @@
     text-align: center !important;
     padding-top: 100px !important;
   }
+
   div {
     min-height: 200px !important;
   }
+
   min-height: 200px !important;
 }
 
-input[type="radio"] + label {
+input[type="radio"]+label {
   cursor: pointer !important;
 }
 
 .topnav .navbar-nav .nav-item .nav-link.active {
   color: #ffffff !important;
+}
+
+.ul {
+  padding-left: 0;
+
+  li {
+    list-style-type: none;
+
+  }
+}
+
+button {
+  color: white;
+
+  &.danger {
+    background-color: #FF6565;
+
+    &:hover {
+      background-color: rgba(255, 101, 101, 0.658);
+    }
+  }
+
+  &.primary {
+    background-color: #4945C4;
+
+    &:hover {
+      background-color: rgba(73, 69, 196, 0.733);
+    }
+  }
+
+  &.success {
+    background-color: green;
+
+    &:hover {
+      background-color: rgba(0, 128, 0, 0.623);
+    }
+  }
 }
