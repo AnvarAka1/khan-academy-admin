@@ -1,16 +1,18 @@
 import React from "react";
-import { useForm } from "../../hooks";
+import { useForm, useSelect } from "../../hooks";
 
-import { Row, Col, Card, CardBody, Container, Form } from "reactstrap";
+import { Row, Col, Card, CardBody, Container, Input, FormGroup, Form, Label } from "reactstrap";
 import { CatSubmenu } from "../../ccomponents";
 
 import { Breadcrumb } from "../../ccomponents";
 
-const BlogCatPage = props => {
+const GuidesCatPage = props => {
 	const titleControl = useForm();
 	const slugControl = useForm();
 	const metaKeysControl = useForm();
 	const metaDescControl = useForm();
+	const pCatSelect = useSelect();
+	const orderControl = useForm();
 
 	const submitHandler = event => {
 		event.preventDefault();
@@ -39,9 +41,15 @@ const BlogCatPage = props => {
 										slugControl={slugControl}
 										metaKeysControl={metaKeysControl}
 										metaDescControl={metaDescControl}
+										pCatSelect={pCatSelect}
 										submitted={submitHandler}
 										deleted={deleteHandler}
-									/>
+									>
+										<FormGroup>
+											<Label>Order</Label>
+											<Input value={orderControl.value} onChange={orderControl.onChange} />
+										</FormGroup>
+									</CatSubmenu>
 								</div>
 							</Form>
 						</CardBody>
@@ -52,4 +60,4 @@ const BlogCatPage = props => {
 	);
 };
 
-export default BlogCatPage;
+export default GuidesCatPage;

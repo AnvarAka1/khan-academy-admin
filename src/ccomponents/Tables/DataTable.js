@@ -1,16 +1,25 @@
 import React from "react";
 import { MDBDataTable } from "mdbreact";
+import { Button, Row, Col, Card, CardBody } from "reactstrap";
+import { Link } from "react-router-dom";
 const dataTable = props => {
 	return (
-		<div className="row">
-			<div className="col-12">
-				<div className="card">
-					<div className="card-body">
+		<Row>
+			<Col>
+				<Card>
+					<CardBody>
+						{props.link && (
+							<div className="text-right mb-2">
+								<Link to={props.link}>
+									<Button className="primary">Add new</Button>
+								</Link>
+							</div>
+						)}
 						<MDBDataTable {...props} />
-					</div>
-				</div>
-			</div>
-		</div>
+					</CardBody>
+				</Card>
+			</Col>
+		</Row>
 	);
 };
 

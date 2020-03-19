@@ -7,3 +7,5 @@ export { default as Buttons } from "./Buttons/Buttons";
 export { default as CatSubmenu } from "./CatSubmenu/CatSubmenu";
 export { default as Authors } from "./Authors/Authors";
 export { default as AudioVersion } from "./AudioVersion/AudioVersion";
+export { default as TablesEditable } from "./TableEditable/TableEditable";
+export { default as Categories } from "./Categories/Categories";

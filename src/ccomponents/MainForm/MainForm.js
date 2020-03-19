@@ -1,7 +1,7 @@
 import React from "react";
 import { FormGroup, Label, Input } from "reactstrap";
 import { FormEditor } from "../";
-const mainForm = ({ children, titleControl, slugControl, formEdited }) => {
+const mainForm = ({ children, titleControl, slugControl, formEdited, withoutFormEditor }) => {
 	return (
 		<React.Fragment>
 			<FormGroup>
@@ -25,7 +25,7 @@ const mainForm = ({ children, titleControl, slugControl, formEdited }) => {
 				/>
 			</FormGroup>
 			{children}
-			<FormEditor changed={formEdited} />
+			{!withoutFormEditor && <FormEditor changed={formEdited} />}
 		</React.Fragment>
 	);
 };

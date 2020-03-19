@@ -3,7 +3,7 @@ import { Button, Row, Col } from "reactstrap";
 
 import { DataTable, Breadcrumb } from "../../ccomponents";
 
-const LongreadsPage = props => {
+const ChaptersPage = props => {
 	const [ data, setData ] = useState([]);
 	const [ loading, setLoading ] = useState(true);
 	useEffect(() => {
@@ -67,8 +67,8 @@ const getTableData = () => {
 				width: 150
 			},
 			{
-				label: "Series",
-				field: "series",
+				label: "Category",
+				field: "category",
 				sort: "asc",
 				width: 270
 			},
@@ -95,35 +95,35 @@ const getTableData = () => {
 		rows: [
 			{
 				title: "Intro to combining functions",
-				series: "Algebra 2",
+				category: "Algebra 2",
 				views: "3746",
 				pubDate: "43%",
 				status: "draft"
 			},
 			{
 				title: "Intro to combining functions",
-				series: "Algebra 2",
+				category: "Algebra 2",
 				views: "3746",
 				pubDate: "43%",
 				status: "draft"
 			},
 			{
 				title: "Intro to combining functions",
-				series: "Algebra 2",
+				category: "Algebra 2",
 				views: "3746",
 				pubDate: "43%",
 				status: "draft"
 			},
 			{
 				title: "Intro to combining functions",
-				series: "Algebra 2",
+				category: "Algebra 2",
 				views: "3746",
 				pubDate: "43%",
 				status: "draft"
 			},
 			{
 				title: "Intro to combining functions",
-				series: "Algebra 2",
+				category: "Algebra 2",
 				views: "3746",
 				pubDate: "43%",
 				status: "draft"
@@ -132,4 +132,4 @@ const getTableData = () => {
 	};
 	return data;
 };
-export default LongreadsPage;
+export default ChaptersPage;

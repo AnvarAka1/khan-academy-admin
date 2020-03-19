@@ -75,7 +75,7 @@ const sideBarList = () => {
 				},
 				{
 					id: 1,
-					link: "/blog-categories",
+					link: "/blogs-categories",
 					title: "Blog categories"
 				}
 			]
@@ -121,7 +121,7 @@ const sideBarList = () => {
 				},
 				{
 					id: 2,
-					link: "/guide-categories",
+					link: "/guides-categories",
 					title: "Guide categories"
 				}
 			]

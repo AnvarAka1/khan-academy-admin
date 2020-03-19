@@ -3,7 +3,7 @@ import { Button, Row, Col } from "reactstrap";
 
 import { DataTable, Breadcrumb } from "../../ccomponents";
 
-const ArticlesPage = props => {
+const GuidesPage = props => {
 	const [ data, setData ] = useState([]);
 	const [ loading, setLoading ] = useState(true);
 	useEffect(() => {
@@ -38,13 +38,15 @@ const ArticlesPage = props => {
 	}, []);
 
 	const editHandler = index => {
-		props.history.push(props.match.path + "/" + index);
+		props.history.push(props.match.path + "/edit/" + index);
 	};
 	return (
 		<div className="container-fluid">
 			<Breadcrumb />
 			<Row className="align-items-center">
-				<Col>{!loading && <DataTable data={data} striped bordered responsive />}</Col>
+				<Col>
+					{!loading && <DataTable data={data} link={props.match.path + "/add"} striped bordered responsive />}
+				</Col>
 			</Row>
 		</div>
 	);
@@ -52,6 +54,12 @@ const ArticlesPage = props => {
 const getTableData = () => {
 	const data = {
 		columns: [
+			{
+				label: "ID",
+				field: "id",
+				sort: "asc",
+				width: 150
+			},
 			{
 				label: "Title",
 				field: "title",
@@ -64,6 +72,7 @@ const getTableData = () => {
 				sort: "asc",
 				width: 270
 			},
+
 			{
 				label: "Views",
 				field: "views",
@@ -123,4 +132,4 @@ const getTableData = () => {
 	};
 	return data;
 };
-export default ArticlesPage;
+export default GuidesPage;

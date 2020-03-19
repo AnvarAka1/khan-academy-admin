@@ -38,13 +38,15 @@ const LessonsPage = props => {
 	}, []);
 
 	const editHandler = index => {
-		props.history.push(props.match.path + "/" + index);
+		props.history.push(props.match.path + "/edit/" + index);
 	};
 	return (
 		<div className="container-fluid">
 			<Breadcrumb />
 			<Row className="align-items-center">
-				<Col>{!loading && <DataTable data={data} striped bordered responsive />}</Col>
+				<Col>
+					{!loading && <DataTable data={data} link={props.match.path + "/add"} striped bordered responsive />}
+				</Col>
 			</Row>
 		</div>
 	);
@@ -52,6 +54,12 @@ const LessonsPage = props => {
 const getTableData = () => {
 	const data = {
 		columns: [
+			{
+				label: "ID",
+				field: "id",
+				sort: "asc",
+				width: 150
+			},
 			{
 				label: "Title",
 				field: "title",

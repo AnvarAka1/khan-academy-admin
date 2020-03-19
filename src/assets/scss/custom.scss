@@ -58,6 +58,7 @@ input[type="radio"]+label {
   color: #ffffff !important;
 }
 
+//------------------------- Custom ----------------------
 .ul {
   padding-left: 0;
 
@@ -134,3 +135,13 @@ button {
     width: 115px;
   }
 }
+
+// Sidebar
+
+// body[data-sidebar="dark"] #sidebar-menu ul>li>a.mm-active {
+//   background-color: #4945C4;
+// }
+
+// body[data-sidebar="dark"] .mm-active {
+//   color: white !important
+// }

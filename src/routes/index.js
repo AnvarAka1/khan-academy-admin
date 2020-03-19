@@ -3,17 +3,28 @@ import { Redirect } from "react-router-dom";
 
 // CUSTOM
 import {
+	// Courses
 	LessonsPage,
 	LessonsEditPage,
 	CoursesCatPage,
+	// Blogs
 	ArticlesPage,
 	ArticlesEditPage,
-	BlogCatPage,
+	BlogsCatPage,
+	// Longreads
 	LongreadsPage,
 	LongreadsEditPage,
 	LongreadsCatPage,
 	SeriesPage,
-	SeriesEditPage
+	SeriesEditPage,
+	// Guides
+	GuidesPage,
+	GuidesEditPage,
+	GuidesCatPage,
+	ChaptersPage,
+	ChaptersEditPage,
+	// Users
+	UsersPage
 } from "../containers/";
 
 // END_CUSTOM
@@ -117,46 +128,42 @@ const authProtectedRoutes = [
 	// Custom pages
 
 	// Courses
-	{ path: "/lessons/:id", component: LessonsEditPage },
+	{ path: "/lessons/edit/:id", component: LessonsEditPage },
+	{ path: "/lessons/add", component: LessonsEditPage },
 	{ path: "/lessons", component: LessonsPage },
 	{ path: "/course-categories", component: CoursesCatPage },
 
 	// Blog
-	{ path: "/articles/:id", component: ArticlesEditPage },
+	{ path: "/articles/edit/:id", component: ArticlesEditPage },
+	{ path: "/articles/add", component: ArticlesEditPage },
 	{ path: "/articles", component: ArticlesPage },
-	{ path: "/blog-categories", component: BlogCatPage },
+	{ path: "/blogs-categories", component: BlogsCatPage },
 
 	// Longread
-	{ path: "/longreads/:id", component: LongreadsEditPage },
+	{ path: "/longreads/edit/:id", component: LongreadsEditPage },
+	{ path: "/longreads/add", component: LongreadsEditPage },
 	{ path: "/longreads", component: LongreadsPage },
 	{ path: "/longreads-categories", component: LongreadsCatPage },
-	{ path: "/series/:id", component: SeriesEditPage },
+	{ path: "/series/edit/:id", component: SeriesEditPage },
+	{ path: "/series/add", component: SeriesEditPage },
 	{ path: "/series", component: SeriesPage },
 
 	// Guide
-	{ path: "/lessons/:id", component: LessonsEditPage },
-	{ path: "/lessons", component: LessonsPage },
-	{ path: "/course-categories", component: CoursesCatPage },
+	{ path: "/guides/edit/:id", component: GuidesEditPage },
+	{ path: "/guides/add", component: GuidesEditPage },
+	{ path: "/guides", component: GuidesPage },
+	{ path: "/guides-categories", component: GuidesCatPage },
+	{ path: "/chapters/edit/:id", component: ChaptersEditPage },
+	{ path: "/chapters/add", component: ChaptersEditPage },
+	{ path: "/chapters", component: ChaptersPage },
 
 	// Profession
-	{ path: "/lessons/:id", component: LessonsEditPage },
-	{ path: "/lessons", component: LessonsPage },
-	{ path: "/course-categories", component: CoursesCatPage },
 
 	// Users
-	{ path: "/lessons/:id", component: LessonsEditPage },
-	{ path: "/lessons", component: LessonsPage },
-	{ path: "/course-categories", component: CoursesCatPage },
-
+	{ path: "/users", component: UsersPage },
 	// Admins
-	{ path: "/lessons/:id", component: LessonsEditPage },
-	{ path: "/lessons", component: LessonsPage },
-	{ path: "/course-categories", component: CoursesCatPage },
 
 	// Miscellaneous
-	{ path: "/lessons/:id", component: LessonsEditPage },
-	{ path: "/lessons", component: LessonsPage },
-	{ path: "/course-categories", component: CoursesCatPage },
 
 	// Calendar
 	{ path: "/calendar", component: Calendar },
