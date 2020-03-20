@@ -16,6 +16,7 @@ const CoursesCatPage = props => {
 	useEffect(() => {
 		let cats = getCategories();
 		setCategories(initCategoriesViaRecursion(cats));
+		// eslint-disable-next-line
 	}, []);
 
 	const initCategoriesViaRecursion = cats => {
@@ -32,6 +33,9 @@ const CoursesCatPage = props => {
 			};
 		});
 	};
+	const categoryHandler = (id, count) => {
+		// need to be changed
+	};
 
 	const submitHandler = event => {
 		event.preventDefault();
@@ -47,7 +51,9 @@ const CoursesCatPage = props => {
 			<Row>
 				<Col md={6}>
 					<Card>
-						<CardBody>{categories && <Categories categories={categories} />}</CardBody>
+						<CardBody>
+							{categories && <Categories clicked={categoryHandler} categories={categories} />}
+						</CardBody>
 					</Card>
 				</Col>
 				<Col md={6}>

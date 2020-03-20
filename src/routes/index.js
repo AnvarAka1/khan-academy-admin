@@ -24,7 +24,9 @@ import {
 	ChaptersPage,
 	ChaptersEditPage,
 	// Users
-	UsersPage
+	UsersPage,
+	// Admins
+	AdminsPage
 } from "../containers/";
 
 // END_CUSTOM
@@ -163,6 +165,7 @@ const authProtectedRoutes = [
 	{ path: "/users", component: UsersPage },
 	// Admins
 
+	{ path: "/admins", component: AdminsPage },
 	// Miscellaneous
 
 	// Calendar

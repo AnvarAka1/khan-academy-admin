@@ -9,3 +9,4 @@ export { default as Authors } from "./Authors/Authors";
 export { default as AudioVersion } from "./AudioVersion/AudioVersion";
 export { default as TablesEditable } from "./TableEditable/TableEditable";
 export { default as Categories } from "./Categories/Categories";
+export { default as UserCards } from "./UserCards/UserCards";

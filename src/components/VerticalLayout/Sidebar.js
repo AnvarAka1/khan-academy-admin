@@ -48,7 +48,7 @@ const sideBarList = () => {
 			id: 1,
 			link: "/#",
 			title: "Courses",
-			icon: "ti-email",
+			icon: "ti-comments",
 			submenus: [
 				{
 					id: 0,
@@ -84,7 +84,7 @@ const sideBarList = () => {
 			id: 3,
 			link: "/#",
 			title: "Longread",
-			icon: "ti-calendar",
+			icon: "ti-notepad",
 			submenus: [
 				{
 					id: 0,
@@ -107,7 +107,7 @@ const sideBarList = () => {
 			id: 4,
 			link: "/#",
 			title: "Guide",
-			icon: "ti-email",
+			icon: "ti-receipt",
 			submenus: [
 				{
 					id: 0,
@@ -130,7 +130,7 @@ const sideBarList = () => {
 			id: 5,
 			link: "/#",
 			title: "Profession",
-			icon: "ti-email",
+			icon: "ti-user",
 			submenus: [
 				{
 					id: 0,
@@ -143,19 +143,19 @@ const sideBarList = () => {
 			id: 6,
 			link: "/users",
 			title: "Users",
-			icon: "ti-email"
+			icon: "ti-calendar"
 		},
 		{
 			id: 7,
 			link: "/admins",
 			title: "Admins",
-			icon: "ti-email"
+			icon: "ti-star"
 		},
 		{
 			id: 8,
 			link: "/#",
 			title: "Miscellaneous",
-			icon: "ti-email",
+			icon: "ti-bookmark-alt",
 			submenus: [
 				{
 					id: 0,

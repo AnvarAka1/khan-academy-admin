@@ -25,7 +25,7 @@ const ProfileMenu = ({ fullName }) => {
 				</DropdownToggle>
 				<DropdownMenu right>
 					<DropdownItem tag="a" href="#">
-						<span className="badge badge-success float-right">11</span>
+						{/* <span className="badge badge-success float-right">11</span> */}
 						<i className="mdi mdi-settings font-size-17 align-middle mr-1" />Settings
 					</DropdownItem>
 					<div className="dropdown-divider" />

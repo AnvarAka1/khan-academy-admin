@@ -26,5 +26,5 @@ export { default as ChaptersEditPage } from "./GuidesPage/ChaptersEditPage";
 // Users
 export { default as UsersPage } from "./UsersPage/UsersPage";
 // Admins
-
+export { default as AdminsPage } from "./AdminsPage/AdminsPage";
 // Miscellaneous

@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 // import images
 import logodarkImg from "../../assets/images/logo-dark.png";
-import logosmImg from "../../assets/images/logo-sm.png";
-import logolightImg from "../../assets/images/logo-light.png";
+import logosmImg from "../../assets/images/logo-khan-sm.png";
+import logolightImg from "../../assets/images/logo-khan.png";
 
 // Import other Dropdown
 
@@ -43,10 +43,10 @@ const TopBar = props => {
 
 							<Link to="/dashboard" className="logo logo-light">
 								<span className="logo-sm">
-									<img src={logosmImg} alt="" height="22" />
+									<img src={logosmImg} alt="" height="40" />
 								</span>
-								<span className="logo-lg">
-									<img src={logolightImg} alt="" height="18" />
+								<span className="logo-lg" style={{ background: "rgba(255, 255, 255, 0.2)" }}>
+									<img src={logolightImg} alt="" height="46" />
 								</span>
 							</Link>
 						</div>
